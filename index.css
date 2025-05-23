@@ -8,7 +8,7 @@ body {
     width:100vw;
     height:100vh;
     overflow:hidden;
-    font-family: 'Dancing Script', sans-serif;
+    font-family: 'Poetsen One', sans-serif;
 }
 #loading {
     width: 100vw;
@@ -235,7 +235,7 @@ body {
 }
 .btn_one {
     font-size:18px;
-    font-family: 'Dancing Script', sans-serif;
+    font-family: 'Poetsen One', sans-serif;
     color:#fff;
     background:transparent;
     border:3px solid #fff;
