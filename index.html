@@ -2,166 +2,174 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sabrina Fan Page | portfolio</title>
-    <link rel="icon" type="image" href="./assets/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sabrina Fan Page | portfolio</title>
+  <link rel="icon" type="image" href="./assets/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    <div id="loading">
-        <div id="spinner"></div>
+  <!-- 🔊 Background Music -->
+  <audio id="bg-music" src="background.mp3" autoplay loop></audio>
+
+  <!-- ▶️ Play/Pause Button -->
+  <button onclick="toggleMusic()" style="position: fixed; top: 10px; left: 10px; z-index: 1000;">⏸️ Pause Music</button>
+
+  <div id="loading">
+    <div id="spinner"></div>
+  </div>
+  <div id="particles-js"></div>
+  <div id="box">
+    <div class="box1 onlywide animated bounceOutLeft" style="animation-delay: 1700ms;"></div>
+    <div class="box2 onlywide animated bounceOutLeft" style="animation-delay: 1800ms;"></div>
+    <div class="box2 onlywide animated bounceOutLeft" style="animation-delay: 1900ms;"></div>
+    <div class="box2 animated bounceOutRight" style="animation-delay: 1900ms;"></div>
+    <div class="box2 onlywide animated bounceOutRight" style="animation-delay: 1800ms;"></div>
+    <div class="box2 onlywide animated bounceOutRight" style="animation-delay: 1700ms;"></div>
+  </div>
+  <a id="about" onclick="showabout()" class="animated fadeIn" style="animation-delay: 1000ms;">ABOUT</a>
+  <a id="work" onclick="showwork()" class="animated fadeIn" style="animation-delay: 1000ms;">AWARDS</a>
+  <a id="contact" onclick="showcontact()" class="animated fadeIn" style="animation-delay: 1000ms;">STREAMS</a>
+  <a id="projects" onclick="showprojects()" class="animated fadeIn" style="animation-delay: 1000ms;">ALBUMS</a>
+
+  <div id="middle" class="animated slideInDown" style="animation-delay: 2000ms;">
+    <h1>Sabrina Fan Page</h1>
+    <h2>Fan | Enthusiast | Singer</h2>
+    <div id="menu">
+      <a onclick="showabout()">ABOUT</a>
+      <a onclick="showwork()">AWARDS</a>
+      <a onclick="showcontact()">STREAMS</a>
+      <a onclick="showprojects()">ALBUMS</a>
     </div>
-    <div id="particles-js"></div>
-    <div id="box">
-        <div class="box1 onlywide animated bounceOutLeft" style="animation-delay: 1700ms;"></div>
-        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay: 1800ms;"></div>
-        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay: 1900ms;"></div>
-        <div class="box2 animated bounceOutRight" style="animation-delay: 1900ms;"></div>
-        <div class="box2 onlywide animated bounceOutRight" style="animation-delay: 1800ms;"></div>
-        <div class="box2 onlywide animated bounceOutRight" style="animation-delay: 1700ms;"></div>
-    </div>
-    <a id="about" onclick="showabout()" class="animated fadeIn" style="animation-delay: 1000ms;">ABOUT</a>
-    <a id="work" onclick="showwork()" class="animated fadeIn" style="animation-delay: 1000ms;">AWARDS</a>
-    <a id="contact" onclick="showcontact()" class="animated fadeIn" style="animation-delay: 1000ms;">STREAMS</a>
-    <a id="projects" onclick="showprojects()" class="animated fadeIn" style="animation-delay: 1000ms;">ALBUMS</a>
-    <div id="middle" class="animated slideInDown" style="animation-delay: 2000ms;">
-        <h1>Sabrina Fan Page</h1>
-        <h2>Fan | Enthusiast | Singer</h2>
-        <div id="menu">
-            <a onclick="showabout()">ABOUT</a>
-            <a onclick="showwork()">AWARDS</a>
-            <a onclick="showcontact()">STREAMS</a>
-            <a onclick="showprojects()">ALBUMS</a>
+    <table>
+      <tr>
+        <td class="animated zoomIn" style="animation-delay:2.2s;">
+          <a class="social" href="https://open.spotify.com/artist/74KM79TiuVKeVCqs8QtB0B?si=VjZKbRbLQkWtmaNYy9BbJw">
+            <i class="fas fa-atom"></i>
+          </a>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="projects_container" class="container">
+    <div onclick="closeprojects()"><i class="fas fa-angle-right"></i></div>
+    <h1>Projects</h1>
+    <section>
+      <h2>Sabrina has 6 Albums</h2>
+      <p>
+        Short n' Sweet,
+        Emails i can't send,
+        Singular Act 2,
+        Singular Act 1,
+        EVOlution,
+        Eyes Wide Open.
+      </p>
+      <ul>
+        <div class="project_card">
+          <div class="project_info">
+            <h3>Singles</h3>
+            <p>Why, Alien, Honeymoon Fades, Skin.</p>
+            <a href="https://www.sabrinacarpenter.com" target="_blank" rel="noopener noreferrer" class="btn_one"
+              style="color: inherit; text-decoration: none;">View Website</a>
+          </div>
         </div>
-        <table>
-            <tr>
-                <td class="animated zoomIn" style="animation-delay:2.2s;"><a class="social"
-                        href="https://open.spotify.com/artist/74KM79TiuVKeVCqs8QtB0B?si=VjZKbRbLQkWtmaNYy9BbJw"><i class="fas fa-atom"></i></a></td> 
-            </tr>
-        </table>
-    </div>
-    <div id="projects_container" class="container">
-        <div onclick="closeprojects()"><i class="fas fa-angle-right"></i></div>
-        <h1>Projects</h1>
-        <section>
-            <h2>Sabrina has 6 Albums</h2>
-            <p>
-                Short n' Sweet, 
-                
-                Emails i can't send, 
-               
-                Singular Act 2, 
-              
-                Singular Act 1, 
-                
-                EVOlution, 
-                
-                Eyes Wide Open. 
-                
-            </p>
-            <ul>
-                <div class="project_card">
-                    <div class="project_info">
-                        <h3>Singles</h3>
-                        <p>Why, 
-                            
-                            Alien, 
-                            
-                            Honeymoon Fades, 
-                            
-                            Skin. 
-                             </p>
-                        <a href="https://www.sabrinacarpenter.com" target="_blank" rel="noopener noreferrer" class="btn_one" style="color: inherit; text-decoration: none;">
-                          View Website
-                        </a>
-                        </button>
-                    </div>
-                </div>
-                
-            </ul>
-        </section>
-    </div>
-    <div id="work_container" class="container">
-        <div onclick="closework()"><i class="fas fa-angle-right"></i></div>
-        <h1>Awards</h1>
-        <section>
-            <h2>2 time grammy winner - best pop solo performance and best pop vocal album</h2>
-            <p>
-                MTV Video Music Awards - Song of the Year 2024
-            </p>
-            <div id="used">
-                <div><i class="fas fa-circle"></i>&nbsp;Grammys</div>
-                <div><i class="fas fa-circle"></i>&nbsp;MTV Awards</div>
-                <div><i class="fas fa-circle"></i>&nbsp;Nominations</div>
-            </div>
-            <button class="btn_one"><a href="./assets/AP_CSP_Test_Breakdown.pdf" target="_blank"
-                    style="color: inherit; text-decoration: none">View
-                    Resume</a></button>
-        </section>
-    </div>
-    <div id="about_container" class="container">
-        <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
-        <h1>About</h1>
-        <section>
-            <h2>Have you ever tried, this one?</h2>
-            <p>
-                Pop singer and actor Sabrina Carpenter is known for the songs “Please Please Please” and “Espresso.” 
-                
-                The Pennsylvania native signed her first record deal and landed her acting break in 2014 as a young teenager. 
-                
-                She tackled the lead role in the Disney Channel series Girl Meets World for three seasons and steadily booked movie parts. 
-                
-                Since signing with Island Records in 2021, Carpenter has become a pop music sensation with the songs “Feather” and “Nonsense,” among others. 
-                
-                She released her sixth studio album, the Grammy-nominated Short n’ Sweet, in August 2024.
+      </ul>
+    </section>
+  </div>
 
-            </p>
+  <div id="work_container" class="container">
+    <div onclick="closework()"><i class="fas fa-angle-right"></i></div>
+    <h1>Awards</h1>
+    <section>
+      <h2>2 time grammy winner - best pop solo performance and best pop vocal album</h2>
+      <p>MTV Video Music Awards - Song of the Year 2024</p>
+      <div id="used">
+        <div><i class="fas fa-circle"></i>&nbsp;Grammys</div>
+        <div><i class="fas fa-circle"></i>&nbsp;MTV Awards</div>
+        <div><i class="fas fa-circle"></i>&nbsp;Nominations</div>
+      </div>
+      <button class="btn_one"><a href="./assets/AP_CSP_Test_Breakdown.pdf" target="_blank"
+          style="color: inherit; text-decoration: none">View Resume</a></button>
+    </section>
+  </div>
 
-            <p>
-                GO LISTEN TO SABRINAS MUSIC
-            </p>
+  <div id="about_container" class="container">
+    <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
+    <h1>About</h1>
+    <section>
+      <h2>Have you ever tried, this one?</h2>
+      <p>
+        Pop singer and actor Sabrina Carpenter is known for the songs “Please Please Please” and “Espresso.”
+        The Pennsylvania native signed her first record deal and landed her acting break in 2014 as a young teenager.
+        She tackled the lead role in the Disney Channel series Girl Meets World for three seasons and steadily booked
+        movie parts.
+        Since signing with Island Records in 2021, Carpenter has become a pop music sensation with the songs “Feather”
+        and “Nonsense,” among others.
+        She released her sixth studio album, the Grammy-nominated Short n’ Sweet, in August 2024.
+      </p>
+      <p>GO LISTEN TO SABRINAS MUSIC</p>
+    </section>
+    <section>
+      <h2>skills</h2>
+      <p>singing, songwriting, acting, "shes so tired of being great at everything"</p>
+    </section>
+  </div>
 
-        </section>
-        <section>
-            <h2>skills</h2>
-            <p>
-                singing, songwriting, acting, "shes so tired of being great at everything"
-            </p>
-        </section>
-    </div>
-    <div id="contact_container" class="container">
-        <div onclick="closecontact()"><i class="fas fa-angle-down"></i></div>
-        <h1>Contact</h1>
-        <section>
-            <h2>No way to reach out to me</h2>
-            <p>
-            <form action="https://formcarry.com/s/JKNu0aGkeQ" method="POST" class="formcarry-form">
-                <input name="name" type="text" placeholder="name" required />
-                <input name="email" type="email" placeholder="email" required /><br>
-                <textarea name="message" placeholder="your message" required rows="5"></textarea><br>
-                <button class="btn_one">send</button>
-            </form>
-            </p>
+  <div id="contact_container" class="container">
+    <div onclick="closecontact()"><i class="fas fa-angle-down"></i></div>
+    <h1>Contact</h1>
+    <section>
+      <h2>No way to reach out to me</h2>
+      <form action="https://formcarry.com/s/JKNu0aGkeQ" method="POST" class="formcarry-form">
+        <input name="name" type="text" placeholder="name" required />
+        <input name="email" type="email" placeholder="email" required /><br>
+        <textarea name="message" placeholder="your message" required rows="5"></textarea><br>
+        <button class="btn_one">send</button>
+      </form>
+      <td class="animated zoomIn" style="animation-delay:2.2s;">
+        <a class="social" href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+      </td>
+    </section>
+  </div>
 
-            <td class="animated zoomIn" style="animation-delay:2.2s;"><a class="social"
-                href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a></td> 
-        </section>
-    </div>
-    <div id="footer">
-        Unbelievable Particles Floating Around You<br> <a href="https://powerlock.github.io">ThePowerLock</a>
-    </div>
-    <script src="index.js" type="text/javascript"></script>
-    <script src="particles.js"></script>
-    <script src="app.js"></script>
+  <div id="footer">
+    Unbelievable Particles Floating Around You<br>
+    <a href="https://powerlock.github.io">ThePowerLock</a>
+  </div>
+
+  <!-- JS files -->
+  <script src="index.js" type="text/javascript"></script>
+  <script src="particles.js"></script>
+  <script src="app.js"></script>
+
+  <!-- 🎵 Music Control Script -->
+  <script>
+    const music = document.getElementById("bg-music");
+    const button = document.querySelector("button[onclick='toggleMusic()']");
+
+    let isPlaying = true;
+
+    function toggleMusic() {
+      if (isPlaying) {
+        music.pause();
+        button.textContent = "▶️ Play Music";
+      } else {
+        music.play();
+        button.textContent = "⏸️ Pause Music";
+      }
+      isPlaying = !isPlaying;
+    }
+  </script>
+
 </body>
 
 </html>
