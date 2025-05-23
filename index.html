@@ -20,8 +20,24 @@
   <!-- 🔊 Background Music -->
   <audio id="bg-music" src="assets/background.mp3" autoplay loop></audio>
 
+  <!-- Volume Slider -->
+  <input
+    id="volume-slider"
+    type="range"
+    min="0"
+    max="1"
+    step="0.01"
+    value="1"
+    style="position: fixed; bottom: 50px; left: 10px; width: 120px; z-index: 9999;"
+    title="Volume"
+  />
+
   <!-- ▶️ Play/Pause Button -->
-  <button onclick="toggleMusic()" style="position: fixed; top: 10px; left: 10px; z-index: 9999; background: white; padding: 8px; border-radius: 4px;">
+  <button
+    id="play-pause-btn"
+    onclick="toggleMusic()"
+    style="position: fixed; bottom: 10px; left: 10px; z-index: 9999; background: white; padding: 8px; border-radius: 4px;"
+  >
     ⏸️ Pause Music
   </button>
 
@@ -77,10 +93,9 @@
       </p>
       <h3>Listen to the Latest Album: Short n’ Sweet</h3>
       <iframe style="border-radius:12px"
-        src="https://open.spotify.com/embed/album/3WzBIQmn2hrulLeTY9smkk?utm_source=generator" width="100%"
-        height="352" frameBorder="0"
-        allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-      </iframe>
+        src="https://open.spotify.com/embed/album/3WzBIQmn2hrulLeTY9smkk?utm_source=generator" width="100%" height="352"
+        frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
       <ul>
         <div class="project_card">
           <div class="project_info">
@@ -129,8 +144,8 @@
       <p>Enjoy one of her latest tracks:</p>
       <iframe style="border-radius:12px"
         src="https://open.spotify.com/embed/track/2qSkIjg1o9h3YT9RAgYN75?utm_source=generator" width="100%" height="352"
-        frameBorder="0" allowfullscreen=""
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
     </section>
     <section>
       <h2>skills</h2>
@@ -152,7 +167,7 @@
       </p>
 
       <td class="animated zoomIn" style="animation-delay:2.2s;">
-        <a class="social" href="https://www.instagram.com/sabrinacarpenter/" target="_blank" rel="noopener noreferrer"><i
+        <a class="social" href="https://www.instagram.com/sabrinacarpenter/" target="_blank"><i
             class="fab fa-instagram"></i></a>
       </td>
     </section>
@@ -171,7 +186,8 @@
   <!-- 🎵 Music Control Script -->
   <script>
     const music = document.getElementById("bg-music");
-    const button = document.querySelector("button[onclick='toggleMusic()']");
+    const button = document.getElementById("play-pause-btn");
+    const volumeSlider = document.getElementById("volume-slider");
 
     let isPlaying = true;
 
@@ -185,7 +201,13 @@
       }
       isPlaying = !isPlaying;
     }
+
+    // Volume slider event listener
+    volumeSlider.addEventListener("input", (e) => {
+      music.volume = e.target.value;
+    });
   </script>
 </body>
 
 </html>
+
